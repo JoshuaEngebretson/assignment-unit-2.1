@@ -82,16 +82,22 @@ else {
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
-let mostPets = pets
+let mostPets;
 if ( pets < friendsPets === true ) {
     mostPets = friendsPets
+}
+else {
+    mostPets = pets
 }
 
 console.log( 'The most pets is', mostPets );
 
-if ( mostPets === pets ) {
-    console.log( 'Between my friend and I, I have the most pets with,', mostPets );
+if ( mostPets === pets && mostPets === friendsPets ) {
+    console.log( 'My friend and I have the same number of pets,', mostPets );
 }
+else if ( mostPets === pets ) {
+    console.log( 'I have the more pets than my friend with,', mostPets, 'pets.' );
+}    
 else {
     console.log( 'My friend has more pets. They have', mostPets, 'pets.' );
 }
