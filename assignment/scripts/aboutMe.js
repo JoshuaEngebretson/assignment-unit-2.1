@@ -23,7 +23,7 @@ let luckyNumber = 4;
 console.log( 'My name is', fullName+', and I think', luckyNumber, 'is a winner!' );
 
 // 7 - Create a variable named `adventurous` and set it to a boolean value (true or false)
-let adventurous = false;
+let adventurous = true;
 
 // 8 - Create a variable named `food`, and set its value to a string of your favorite food
 let food  = 'sushi';
@@ -64,6 +64,7 @@ if (luckyNumber === 2 && adventurous === true) {
 // and console logs "Oh no, I have too many pets!"
 // if the value of `pets` is greater than the value of `allowedPets`.
 
+console.log( 'The max number of allowed pets in my apartment is', allowedPets );
 if ( pets < allowedPets ) {
     console.log( 'I can have more pets!' );
 }
@@ -81,6 +82,19 @@ else {
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
+let mostPets = pets
+if ( pets < friendsPets === true ) {
+    mostPets = friendsPets
+}
+
+console.log( 'The most pets is', mostPets );
+
+if ( mostPets === pets ) {
+    console.log( 'Between my friend and I, I have the most pets with,', mostPets );
+}
+else {
+    console.log( 'My friend has more pets. They have', mostPets, 'pets.' );
+}
 
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
@@ -88,5 +102,22 @@ else {
 //      "Third is the one with the polka dot dress" if your lucky number is 3
 //      Otherwise, log "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
+switch (luckyNumber) {
+    case 1:
+        console.log( 'First is the worst' );
+        break;
+    case 2:
+        console.log( 'Second is the best' );
+        break;
+    case 3:
+        console.log( 'Third is the one with the polka dot dress' );
+        break;
+    default:
+        console.log( 'Luck is what happens when preparation meets opportunity' );
+        break;
+}
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+let adventureStatement=
+    (adventurous === true) ? 'Adventures are great!' : 'How about we stay home?';
+console.log( adventureStatement );
